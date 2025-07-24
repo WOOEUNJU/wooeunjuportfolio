@@ -1,0 +1,990 @@
+/* @import url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css"); */
+@import url("https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* 기본 스타일 초기화 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  font-family: "Gmarket Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  position: relative;
+}
+
+.section1 {
+  height: 100vh;
+  position: relative;
+}
+.bracket-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: 700;
+}
+.bracket {
+  font-size: 128px;
+  position: relative;
+  opacity: 0;
+}
+
+.bracket.left {
+  color: #ff4fc2;
+  animation: bracketLeft 1s forwards;
+  animation-delay: 0.2s;
+}
+
+.bracket.right {
+  color: #49ff9c;
+  animation: bracketRight 1.2s forwards;
+  animation-delay: 0.2s;
+}
+
+/* 메인 아이콘 */
+.icon-wrapper {
+  position: absolute;
+  top: 70%; /* 원하는 위치로 조절 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 48px;
+}
+.icon-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 텍스트 */
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 0 20px;
+  opacity: 0;
+  animation: fadeInText 1s forwards;
+  animation-delay: 1.2s;
+}
+
+.greeting,
+.name {
+  font-size: 128px;
+  color: white;
+  line-height: 1.1;
+}
+
+.name {
+  margin-top: 10px;
+}
+
+/* 스크롤 인디케이터 */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  font-size: 24px;
+  color: white;
+  animation: bounce 1.5s infinite;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-20%);
+}
+
+/* 애니메이션 */
+@keyframes bracketLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes bracketRight {
+  from {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(40px) translateY(140px);
+  }
+}
+
+@keyframes fadeInText {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* 움직이는 스마일 배너 */
+/* Moving banner container */
+.moving-banner {
+  width: 100%;
+  background-color: #47f982;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Track that scrolls horizontally */
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: scrollBanner 20s linear infinite;
+}
+
+/* Single banner item */
+.banner-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 이미지+텍스트 좌측 정렬 */
+  font-weight: bold;
+  font-size: 35px;
+  padding: 0 40px;
+  gap: 40px;
+  white-space: nowrap;
+  color: black;
+}
+
+.banner-track img {
+  width: 30px;
+  height: 30px;
+  padding: 5px 5px;
+  margin-right: 30px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.banner-track span {
+  margin-top: 4px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Animation keyframes */
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 메인 배너 이미지 애니메이션 */
+.spinning-icon-wrapper {
+  position: absolute;
+  top: 35%;
+  right: 30%;
+  z-index: 10;
+}
+
+.spin-icon {
+  width: 40px;
+  height: 40px;
+  animation: spin 4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ====== PROFILE SECTION ====== */
+.section2 {
+  width: 100%;
+  background-color: #000;
+  padding: 160px 120px;
+  position: relative;
+  box-sizing: border-box;
+  /* font-family: "Pretendard", sans-serif; */
+}
+
+/* 유령 애니메이션 */
+.bouncy-ghost {
+  position: absolute;
+  top: 160px; /* 화면 위쪽에 배치 (조절 가능) */
+  left: 900px; /* 시작 왼쪽 밖에서 */
+  width: 80px;
+  height: 80px;
+  animation: bounceMove 10s ease-in-out infinite;
+  z-index: 30;
+}
+
+.bouncy-ghost img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 유령이 곡선을 그리며 튀는 듯 이동하는 애니메이션 */
+@keyframes bounceMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(200px, -50px) rotate(-5deg) scale(1.05);
+  }
+  40% {
+    transform: translate(500px, 0px) rotate(5deg) scale(1.1);
+  }
+  60% {
+    transform: translate(800px, -40px) rotate(-3deg) scale(1);
+  }
+  80% {
+    transform: translate(1100px, 0px) rotate(3deg) scale(1);
+  }
+  100% {
+    transform: translate(1400px, -30px) rotate(0deg) scale(0.95);
+    opacity: 1;
+  }
+}
+.profile-title {
+  font-size: 80px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 80px;
+  letter-spacing: -2px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 80px;
+}
+
+.profile-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.profile-box {
+  color: white;
+}
+
+.profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.profile-heading h2 {
+  font-size: 30px;
+  margin-left: 8px;
+  color: #00ff90;
+  opacity: 0;
+  animation: ghostFadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+.profile-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.profile-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-box li {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.profile-box li span {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+@keyframes ghostFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  opacity: 0;
+  animation: ghostFadeIn 1s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.profile-column:first-child .profile-box:first-child {
+  margin-top: 240px; /* 원하는 값으로 조절 (예: 20px~60px) */
+}
+
+/* 섹션 3 css */
+.section3 {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ff52b1 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 제목 스타일 */
+.skills-title {
+  font-size: 80px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -2px;
+  position: absolute;
+  top: 100px; /* 여백 약간 더 증가 */
+  left: 250px;
+  margin: 0;
+  text-align: left;
+  z-index: 2;
+  font-family: "Gmarket Sans", sans-serif;
+}
+
+.title-top {
+  display: block;
+}
+
+.title-bottom {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em; /* 요소 사이 간격 */
+}
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.4);
+  }
+}
+
+/* 3번째 페이지 돌아가는 별 */
+.inline-spin-icon {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle; /* 텍스트와 수직 중앙 정렬 */
+  margin: 0 8px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 섹션 3 이미지 모음 */
+.skill-images {
+  position: relative;
+  width: 900px; /* 필요에 따라 조절 */
+  height: 450px; /* 필요에 따라 조절 */
+  margin-top: 300px; /* 제목 아래 적절 간격 */
+  margin-left: 120px; /* 제목과 동일한 왼쪽 여백 */
+}
+
+/* 반드시 section3는 relative여야 함 */
+.section3 {
+  position: relative;
+  min-height: 1100px;
+}
+
+/* 연한 핑크 배경 박스 */
+.skill-background-box {
+  position: absolute;
+  top: 250px; /* 제목 아래부터 */
+  left: 250px;
+  width: 1400px;
+  height: 700px;
+  background-color: #ffffff; /* 연한 핑크 */
+  opacity: 30%;
+  border-radius: 80px;
+  z-index: 0; /* 가장 뒤에 */
+  margin-top: 90px;
+}
+
+/* 이미지들을 모두 앞에 나오게 하기 위한 기본 설정 */
+
+.skill-images img {
+  position: absolute;
+  z-index: 1;
+  margin-top: 90px;
+}
+
+/* Photoshop */
+.img-photoshop {
+  width: 146px;
+  position: absolute;
+  top: 40px;
+  left: 240px;
+  width: 640px;
+}
+
+/* Illustrator */
+.img-illustrator {
+  position: absolute;
+  top: 60px;
+  left: 1010px;
+  width: 400px;
+}
+
+/* Indesign */
+.img-indesign {
+  position: absolute;
+  top: 460px;
+  left: 1010px;
+  width: 400px;
+}
+
+/* Figma */
+.img-figma {
+  position: absolute;
+  top: 190px;
+  left: 620px;
+  width: 260px;
+}
+
+/* VS Code (큰 네모 배경) */
+.img-vscode {
+  position: absolute;
+  top: 200px;
+  left: 180px;
+  width: 280px;
+}
+
+/* CSS, JS, HTML (작은 도형 묶음) */
+.img-web {
+  position: absolute;
+  top: 190px;
+  left: 240px;
+  width: 260px;
+}
+
+/* Good! */
+.img-good {
+  position: absolute;
+  top: 465px;
+  left: 240px;
+  width: 180px;
+}
+/* Visual Studio Code 텍스트 */
+.img-vscode-text {
+  position: absolute;
+  top: 465px;
+  left: 465px;
+  width: 510px;
+}
+
+/* Nice */
+.img-nice {
+  position: absolute;
+  top: 330px;
+  left: 330px;
+  width: 90px;
+}
+
+/* 섹션 3 이미지가 커지는 효과 애니메이션 */
+
+.skill-images img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skill-images img:hover {
+  transform: scale(1.08);
+  opacity: 0.8; /* 1보다 작으면 연해짐 */
+}
+
+/* 섹션4 - 배경 및 슬라이드 감싸는 전체 */
+.section4 {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  /* background-color: #1a1a1a; */
+  color: white;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section4-background-box {
+  /* position: absolute; */
+  /* top: 250px; */
+  /* left: 250px; */
+  /* width: 1800px; */
+  /* height: 700px; */
+  /* background-color: #ffffff */
+  /* opacity: 0.2; */
+  /* z-index: 0; */
+  /* margin-top: 90px; */
+  /* border-radius: 80px; */
+}
+
+/* 텍스트 */
+.section4 h2 {
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 140px;
+  z-index: 10;
+  position: relative;
+}
+
+/* 슬라이더 컨테이너 */
+.swiper {
+  width: 100%;
+  /* height: 100%; */
+  height: 400px;
+}
+
+.swiper-slide {
+  /* width: 180px !important; */
+  /* background: #444; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.2);
+  z-index: 5;
+}
+
+/* 5번째 섹션 */
+
+.section5 {
+  width: 100%;
+  height: 1000px;
+  /* padding: 100px 0; */
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.section5 h2 {
+  font-size: 80px;
+  text-align: right;
+  margin-bottom: 150px;
+}
+.slide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 280px; /* 필요에 따라 조절 */
+}
+
+.mySwiper5 {
+  width: 90%;
+  height: 800px;
+  margin: 0 auto;
+}
+.mySwiper5 .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.mySwiper5 .swiper-slide {
+  /* background: #333; */
+  color: white;
+  font-size: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  width: 450px !important;
+  /* height: 235px !important; */
+  height: 50%;
+  margin: 0 !important;
+  /* padding: 10px 0px; */
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+}
+.mySwiper5 .swiper-slide .slide-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 이미지 영역 */
+
+.thumbnail {
+  height: auto;
+  overflow: visible;
+}
+.thumbnail img {
+  /* margin-bottom: 150px; */
+  width: 450px;
+  height: auto;
+  display: block; /* 이미지 아래에 여백 제거 */
+  border-radius: 8px; /* 원하면 둥글게 */
+}
+
+.text-top {
+  text-align: left;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #00ff90;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.text-below {
+  color: 14px;
+  font-size: 0.9rem;
+  color: #aaa;
+  white-space: nowrap;
+  font-family: "Pretendard Variable";
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  background-color: #555;
+  white-space: nowrap;
+}
+
+.tag.html {
+  background-color: #fff;
+  font-size: 12px;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+.tag.css {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+.tag.js {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+.tag.figma {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+
+/* 홀수 슬라이드 아래 마진 */
+.mySwiper5 .swiper-slide:nth-child(odd) {
+  /* margin-bottom: 30px !important; */
+}
+/* 6번째 섹션 */
+.section6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* 전체 화면 */
+  background-color: #fff;
+}
+.animated-text-block {
+  font-family: "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 7.5rem; /* 120px */
+  line-height: 1.4;
+  text-align: center;
+}
+/* 7번째 섹션*/
+.section7 .swiper {
+  width: 100%;
+  height: 100vh;
+  background: #000;
+}
+
+.section7 h2 {
+  font-size: 80px;
+  color: #ffffff;
+  margin-top: 200px;
+  padding: 120px 60px;
+}
+
+.section7 .swiper-slide {
+  background: #fff;
+  margin-top: 150px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.section7 .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 키워드 텍스트 */
+.bold {
+  font-weight: 900;
+  color: #000;
+}
+
+/* 핑크 도트 */
+.pink-dot {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: #ff52b1;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin: 0 20px;
+}
+
+/* 블랙 도트 */
+.black-dot {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  background-color: #000;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+/* 태블릿 모양 pill */
+.pill {
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 999px;
+  background-color: #ff1fb2; /* 예시 색상 */
+  color: #fff;
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center; /* 텍스트 수평 정렬 */
+  vertical-align: middle;
+  margin: 0 10px;
+  font-family: "Gmarket Sans", sans-serif;
+  line-height: 0.2; /* 높이에 맞춰 수직 위치 조정 */
+}
+.pill.pink {
+  background-color: #ff1fb2;
+}
+
+.pill.green {
+  background-color: #5eff96;
+  width: 220px;
+  height: 102px;
+}
+
+/* 아이콘 */
+.icon,
+.ghost {
+  font-size: 5rem;
+  margin: 0 20px;
+}
+
+/* 푸터 영역 */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 120px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Pretendard", sans-serif;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* THANK YOU 텍스트 */
+.thank-you {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 괄호 애니메이션 */
+.brace {
+  font-weight: 700;
+  font-size: 48px;
+  display: inline-block;
+  animation: glowColor 2.5s ease-in-out infinite;
+}
+
+.brace-left {
+  color: #ff38cf;
+  animation-delay: 0s;
+}
+
+.brace-right {
+  color: #00ff95;
+  animation-delay: 1.25s;
+}
+
+@keyframes glowColor {
+  0% {
+    color: #ff38cf;
+    transform: scale(1);
+  }
+  50% {
+    color: #00ff95;
+    transform: scale(1.15);
+  }
+  100% {
+    color: #ff38cf;
+    transform: scale(1);
+  }
+}
+
+/* 👋 웨이브 이모지 애니메이션 */
+.wave {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 연락처 정보 */
+.contact-info {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.contact-info strong {
+  font-weight: 600;
+}
+
+.credit {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* 핑크 스마일 (임시 원형) */
+.smile img {
+  position: absolute;
+  right: 110px;
+  bottom: 0;
+  width: 360px;
+  height: 360px;
+  /* background-color: #ff59c4; */
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(50%, 30%);
+}
