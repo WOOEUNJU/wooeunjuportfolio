@@ -1,0 +1,137 @@
+/* ✅ 기본 레이아웃 */
+.profile-section {
+  max-width: 1300px; /* ✅ 기존 1200 → 1300으로 살짝 넓힘 */
+  margin: 0 auto;
+  padding: 120px 40px; /* ✅ 좌우 여백 20 → 40으로 증가 */
+  color: #fff;
+  font-family: "Gmarket Sans", sans-serif;
+}
+
+.profile-title {
+  font-size: 80px;
+  font-weight: 900;
+  margin-bottom: 30px; /* ✅ 제목과 내용 간격 넓힘 */
+}
+
+.intro-text {
+  font-size: 20px;
+  margin-bottom: 20px; /* ✅ 내용 여백 약간 늘림 */
+}
+
+.intro-text strong {
+  color: #00ff99;
+}
+
+.intro-tags {
+  margin-top: 15px;
+}
+
+.intro-tags span {
+  display: inline-block;
+  margin-right: 10px; /* ✅ 태그 간격 넓힘 */
+  background: #111;
+  border: 1px solid #00ff99;
+  padding: 6px 14px; /* ✅ 패딩 살짝 키워서 더 여유 있게 */
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* ✅ 공통 박스 */
+.profile-grid {
+  display: flex;
+  gap: 60px; /* ✅ 컬럼 간격 40 → 60으로 넓힘 */
+  margin-top: 80px;
+}
+
+.profile-column {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.profile-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px; /* ✅ 제목과 리스트 사이 여백 조금 증가 */
+}
+
+.profile-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px; /* ✅ 아이콘과 텍스트 간격 조금 증가 */
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 🔥 아이콘 없을 때 공간 제거 */
+.profile-icon:not([src]),
+.profile-icon[src=""],
+.profile-icon[src="#"] {
+  display: none !important;
+}
+
+.profile-heading h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00ff99;
+}
+
+.profile-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-column li {
+  margin-bottom: 14px; /* ✅ 리스트 간 간격 넓힘 */
+  line-height: 1.6; /* ✅ 읽기 편하도록 줄 간격 살짝 넓힘 */
+}
+
+.profile-column li span {
+  display: block;
+  font-size: 14px;
+  color: #999;
+  margin-top: 4px; /* ✅ 날짜와 텍스트 간격 살짝 넓힘 */
+}
+
+/* ✅ 상단 3칸 */
+.top-grid {
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px; /* ✅ 상단과 하단 여백 넓힘 */
+}
+
+.bottom-grid {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px; /* ✅ 하단 여백 넓힘 */
+}
+
+/* ✅ 반응형 */
+@media (max-width: 1024px) {
+  .profile-section {
+    padding: 100px 30px; /* ✅ 좌우 여백 유지 */
+  }
+  .profile-grid {
+    flex-wrap: wrap;
+    gap: 40px; /* ✅ 태블릿에서는 간격 조금 좁힘 */
+  }
+  .profile-column {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-section {
+    padding: 80px 20px;
+  }
+  .profile-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .profile-column {
+    width: 100%;
+  }
+}

@@ -7,8 +7,17 @@
       href="https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
     <!-- 프로젝트 CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" herf="css/carmex.css" />
+    <link rel="stylesheet" href="css/section1.css" />
+    <link rel="stylesheet" href="css/section2.css" />
+    <link rel="stylesheet" href="css/section3.css" />
+    <link rel="stylesheet" href="css/section6.css" />
+    <link rel="stylesheet" href="css/section7.css" />
+    <link rel="stylesheet" href="css/section-icon.css" />
+    <link rel="stylesheet" href="css/cursor.css" />
 
     <!-- Swiper CSS CDN -->
     <link
@@ -22,21 +31,41 @@
     <!-- 내 JS 파일 -->
     <script src="js/swiper-init.js" defer></script>
     <script src="js/script.js" defer></script>
-    <script src="js/swiper.js" defer></script>
+    <script src="js/myswiper4.js" defer></script>
+    <script src="js/" defer></script>
+    <script src="js/an.js" defrer></script>
+    <script src="js/marketkurly.js" defer></script>
+    <script src="js/carmex.js" defer></script>
+    <script src="js/prada.js" defer></script>
+    <script src="js/section7title.js" defer></script>
+    <script src="js/nav.js" defer></script>
   </head>
   <body>
-    <!-- 1번째 페이지-->
+<div class="logo-bar">
+    <span class="ver">Ver.2025</span>
+    <span class="owner">WOO EUNJU PORTFOLIO</span>
+  </div>
+  <nav class="fixed-nav">
+    <ul>
+      <li><a href="#profile">PROFILE</a></li>
+      <li><a href="#skills">MY SKILL & TOOLS</a></li>
+      <li><a href="#cardnews">CARD NEWS</a></li>
+      <li><a href="#webdesign">WEB DESIGN</a></li>
+      <li><a href="#appdesign">APP DESIGN</a></li>
+      <li><a href="#detail">DETAIL & BANNER</a></li>
+    </ul>
+  </nav>
+<!-- 1번째 페이지-->
     <div class="container">
       <section class="section1">
         <div class="bracket-group">
           <span class="bracket left">{</span>
           <div class="text">
-            <div class="greeting">Hi I'm</div>
-            <div class="name">Woo Eunju</div>
+            <div class="greeting">HELLO I'AM</div>
+            <div class="name">WOO EUNJU</div>
           </div>
           <span class="bracket right">}</span>
         </div>
-        <div class="scroll-indicator">↓</div>
         <div class="spinning-icon-wrapper">
           <img
             src="images/mainicon.png"
@@ -92,178 +121,98 @@
             <span>HELLO</span>
             <img src="images/hello.png" alt="Smile" class="banner-icon" />
             <span>HELLO</span>
-            <img src="images/hello.png" alt="Smile" class="banner-icon" />
-            <span>HELLO</span>
-            <img src="images/hello.png" alt="Smile" class="banner-icon" />
-            <span>HELLO</span>
-            <img src="images/hello.png" alt="Smile" class="banner-icon" />
-            <span>HELLO</span>
-            <img src="images/hello.png" alt="Smile" class="banner-icon" />
-            <span>HELLO</span>
-            <img src="images/hello.png" alt="Smile" class="banner-icon" />
-            <span>HELLO</span>
           </div>
         </div>
       </section>
-      <!-- 2번째 페이지-->
-      <section class="section2">
-        <div class="bouncy-ghost">
-          <img src="images/ghost.png" alt="bouncy ghost" />
-        </div>
-        <div class="profile">
-          <h1 class="profile-title">PROFILE</h1>
-          <div class="profile-grid">
-            <!-- Column 1: Experience -->
-            <div class="profile-column">
-              <div class="profile-box">
-                <div class="profile-heading">
-                  <img src="images/ghost.png" alt="icon" class="profile-icon" />
-                  <h2>Experience</h2>
-                </div>
-                <ul>
-                  <li>
-                    (사)푸른차문화연구원<br />
-                    <span>2023.06–2023.11 | 홍보운영 및 연구원</span>
-                  </li>
-                  <li>
-                    대구공예<br />
-                    <span>2022.05–2022.11 | 제품개발 및 홍보마케팅</span>
-                  </li>
-                  <li>
-                    IT 스타트업<br />
-                    <span>2022.01–2022.04 | 웹&모바일 디자인</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+<section class="section2 profile-section">
+  <!-- ✅ 프로필 소개 -->
+  <div class="intro-top">
+    <div class="profile-intro">
+      <h1 class="profile-title">PROFILE</h1>
+      <p class="intro-text">
+        UI·UX와 그래픽 디자인을 넘나드는 멀티플레이어 디자이너 <strong>우은주</strong>입니다.
+      </p>
+      <div class="intro-tags">
+        <span>#UIUXDesigner</span>
+        <span>#GraphicDesigner</span>
+        <span>#CraftDesign</span>
+        <span>#Branding</span>
+      </div>
+    </div>
+  </div>
 
-            <!-- Column 2: Education + License -->
-            <div class="profile-column">
-              <div class="profile-box">
-                <div class="profile-heading">
-                  <img src="images/ghost.png" alt="icon" class="profile-icon" />
-                  <h2>Education</h2>
-                </div>
-                <ul>
-                  <li>
-                    UI/UX 웹콘텐츠 디지털&퍼블리셔 실무 과정 수료<br />
-                    <span>2023.05–2023.08 그린컴퓨터아카데미</span>
-                  </li>
-                  <li>
-                    크리몽 스튜디오<br />
-                    <span>2022.01–2022.12</span>
-                  </li>
-                </ul>
-              </div>
+  <!-- ✅ 3열 레이아웃 -->
+  <div class="profile-grid top-grid">
+    <!-- 1. Education + License -->
+    <div class="profile-column">
+      <div class="profile-heading">
+        <img src="images/ghost.png" class="profile-icon" alt="Education" />
+        <h2>EDUCATION</h2>
+      </div>
+      <ul>
+        <li>계명대학교 미술대학 공예디자인과 전공<br><span>2020.03 | 금속공예</span></li>
+        <li>경명여자 고등학교<br><span>2021.06.03</span></li>
+      </ul>
 
-              <div class="profile-box">
-                <div class="profile-heading">
-                  <img src="images/ghost.png" alt="icon" class="profile-icon" />
-                  <h2>License</h2>
-                </div>
-                <ul>
-                  <li>
-                    웹디자인 개발기능사 필기<br />
-                    <span>2023.06 | 한국산업인력공단</span>
-                  </li>
-                  <li>
-                    OA 마스터<br />
-                    <span>2022.09 | KPC</span>
-                  </li>
-                  <li>
-                    GTQ 포토샵 1급<br />
-                    <span>2022.06 | 한국생산성본부</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      <!-- License (학력 바로 밑) -->
+      <div class="profile-heading" style="margin-top:20px;">
+        <img src="images/ghost.png" class="profile-icon" alt="License" />
+        <h2>LICENSE</h2>
+      </div>
+      <ul>
+        <li>웹디자인 개발기능사 필기<br><span>2023.06 | 한국산업인력공단</span></li>
+        <li>OA 마스터<br><span>2022.09 | 한국생산성본부(KPC)</span></li>
+        <li>GTQ 포토샵 1급<br><span>2022.06 | 한국생산성본부(KPC)</span></li>
+      </ul>
+    </div>
 
-            <!-- Column 3: Awards -->
-            <div class="profile-column">
-              <div class="profile-box">
-                <div class="profile-heading">
-                  <img src="images/ghost.png" alt="icon" class="profile-icon" />
-                  <h2>Awards</h2>
-                </div>
-                <ul>
-                  <li>
-                    제 50회 경북 산업디자인 전람회 공모전 특선<br />
-                    <span>2022.06~2022.07</span>
-                  </li>
-                  <li>
-                    제 10회 현대 주얼리 디자인 공모전 입선<br />
-                    <span>2022.06~2022.07</span>
-                  </li>
-                  <li>
-                    제 6회 주얼리디자인어워드 입선<br />
-                    <span>2022.06~2022.07</span>
-                  </li>
-                  <li>
-                    청년 창업가들의 창업캠프 '동고동락' 3위 수상<br />
-                    <span>2022.06~2022.07</span>
-                  </li>
-                  <li>
-                    제 5회 주얼리디자인어워드 입선<br />
-                    <span>2022.06~2022.07</span>
-                  </li>
-                  <li>
-                    수성대학교 창업 아이디어 경진대회 1위 수상<br />
-                    <span>2022.06~2022.07</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- 3번째 페이지 (Skills Section) -->
-      <section class="section3">
-        <h2 class="skills-title">
-          <span class="title-top">MY</span>
-          <span class="title-bottom">
-            <span class="highlight">SKILLSills</span>
-            <img
-              src="images/subicon.png"
-              alt="Spinning Star"
-              class="inline-spin-icon"
-            />
-            <span class="highlight">TOOLS</span>
-          </span>
-        </h2>
+    <!-- 2. Experience + Exhibition -->
+    <div class="profile-column">
+      <div class="profile-heading">
+        <img src="images/ghost.png" class="profile-icon" alt="Experience" />
+        <h2>EXPERIENCE</h2>
+      </div>
+      <ul>
+        <li>(사)푸른차문화연구원<br><span>2022.11~2024.12 | 홍보마케팅 & 차(茶) 연구원</span></li>
+        <li>대구공예<br><span>2021.03~2022.03 | 홍보마케팅 & 패키지디자인</span></li>
+        <li>IT 스타트업<br><span>2020.03~2021.01 | 그래픽디자인 & 창업교육팀</span></li>
+      </ul>
 
-        <!-- 🌸 연한 핑크 배경 박스 -->
-        <div class="skill-background-box"></div>
-        <div class="skill-images">
-          <img
-            src="images/section3/Adobe-Photoshop.png"
-            alt="Adobe Photoshop"
-            class="img-photoshop"
-          />
-          <img
-            src="images/section3/Adobe-li.png"
-            alt="Adobe Illustrator"
-            class="img-illustrator"
-          />
-          <img
-            src="images/section3/Adobe-in.png"
-            alt="Adobe Indesign"
-            class="img-indesign"
-          />
-          <img src="images/section3/tool-2.png" alt="Figma" class="img-figma" />
-          <img />
-          <img
-            src="images/section3/tool-1.png"
-            alt="CSS, JS, HTML"
-            class="img-web"
-          />
-          <img src="images/section3/good!.png" alt="Good!" class="img-good" />
-          <img
-            src="images/section3/vs-code.png"
-            alt="Visual Studio Code"
-            class="img-vscode-text"
-          />
-        </div>
-      </section>
+      <!-- Exhibition (경력 바로 밑) -->
+      <div class="profile-heading" style="margin-top:20px;">
+        <img src="images/ghost.png" class="profile-icon" alt="Exhibition" />
+        <h2>EXHIBITION</h2>
+      </div>
+      <ul>
+        <li>계명대학교 공예디자인과 3PCS 전시회<br><span>2019.11 | 극재미술관</span></li>
+        <li>계명대학교 공예디자인과 그룹전<br><span>2018.09 | 극재미술관</span></li>
+      </ul>
+    </div>
+
+    <!-- 3. Awards -->
+    <div class="profile-column">
+      <div class="profile-heading">
+        <img src="images/ghost.png" class="profile-icon" alt="Awards" />
+        <h2>AWARDS</h2>
+      </div>
+      <ul>
+        <li>제 50회 경북 산업디자인 전람회 공모전 특선<br><span>2022.06~2022.07</span></li>
+        <li>제 10회 현대 주얼리 디자인 공모전 입선<br><span>2022.06~2022.07</span></li>
+        <li>제 6회 주얼리디자인어워드 입선<br><span>2022.06~2022.07</span></li>
+        <li>청년 창업가들의 창업캠프 '동고동락' 3위 수상<br><span>2022.06~2022.07</span></li>
+        <li>제 5회 주얼리디자인어워드 입선<br><span>2022.06~2022.07</span></li>
+        <li>창업 아이디어 경진대회 1위 수상<br><span>2022.06~2022.07</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- MY SKILLS TOOLS -->
+  <section class="section3">
+  <h2>MY<br>SKILLS TOOLS</h2>
+  <div class="skill-background-box">
+    <img src="images/pink.png" alt="My Skills Tools" class="skills-full-img" />
+  </div>
+</section>
       <!-- 4번째 페이지-->
       <section class="section4">
         <h2>CARD NEWS DESIGN</h2>
@@ -272,47 +221,47 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews1.jpg" alt="" />
+                <img src="images/cardnews1.jpg" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews2.jpg" alt="" />
+                <img src="images/cardnews2.jpg" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews3.jpg" alt="" />
+                <img src="images/cardnews3.jpg" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews4.png" alt="" />
+                <img src="images/cardnews4.png" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews5.jpg" alt="" />
+                <img src="images/cardnews5.png" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews6.jpg" alt="" />
+                <img src="images/cardnews10.jpg" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews7.jpg" alt="" />
+                <img src="images/cardnews6.jpg" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews8.jpg" alt="" />
+                <img src="images/cardnews7.jpg" alt="#" />
               </a>
             </div>
             <div class="swiper-slide">
               <a href="#">
-                <img src="images/cardnews9.png" alt="" />
+                <img src="images/cardnews8.jpg" alt="#" />
               </a>
             </div>
           </div>
@@ -357,7 +306,7 @@
                 <a href="#"></a>
                 <div class="text-top">도미노피자 클론코딩</div>
                 <div class="thumbnail">
-                  <img src="images/4.png" alt="도미노피자 클론코딩" />
+                  <img src="images/2.png" alt="도미노피자 클론코딩" />
                 </div>
                 <div class="info-row">
                   <div class="text-below">
@@ -372,62 +321,68 @@
               </div>
             </div>
 
-            <!-- 🔹 블랙라벨 랜딩페이지 -->
+            <!-- 🔹 설악산 국립공원 홈페이지 -->
             <div class="swiper-slide">
               <div class="slide-card">
                 <a href="#"></a>
-                <div class="text-top">블랙라벨 랜딩페이지</div>
+                <div class="text-top">설악산 국립공원 리디자인</div>
                 <div class="thumbnail">
-                  <img src="images/2.png" alt="블랙라벨 랜딩페이지" />
+                  <img src="images/10.png" alt="설악산 국립공원 리디자인" />
                 </div>
                 <div class="info-row">
                   <div class="text-below">
                     개인 프로젝트 &nbsp;&nbsp; 기여도 100%
                   </div>
                   <div class="tags">
-                    <span class="tag figma">Figma</span>
+                    <span class="tag html">Html</span>
+                    <span class="tag css">Css</span>
+                    <span class="tag js">Js</span>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- 🔹 마켓컬리 랜딩페이지 -->
-            <div class="swiper-slide">
-              <div class="slide-card">
-                <a href="#"></a>
-                <div class="text-top">마켓컬리 랜딩페이지</div>
-                <div class="thumbnail">
-                  <img src="images/5.png" alt="마켓컬리 랜딩페이지" />
-                </div>
-                <div class="info-row">
-                  <div class="text-below">
-                    개인 프로젝트 &nbsp;&nbsp; 기여도 100%
-                  </div>
-                  <div class="tags">
-                    <span class="tag figma">Figma</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+<!-- ✅ Swiper 슬라이드 내부 -->
+<div class="swiper-slide">
+  <div class="slide-card">
+    <div class="text-top">마켓컬리 랜딩페이지</div>
+    <div class="thumbnail">
+      <!-- 썸네일 클릭 시 모달 열림 -->
+      <img src="images/5.png" 
+           alt="마켓컬리 랜딩페이지"
+           onclick="openImagePopup('images/marketkurly.jpg')" 
+           style="cursor:pointer;" />
+    </div>
+    <div class="info-row">
+      <div class="text-below">
+        개인 프로젝트 &nbsp;&nbsp; 기여도 100%
+      </div>
+      <div class="tags">
+        <span class="tag figma">Figma</span>
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- 🔹 카멕스 랜딩페이지 -->
-            <div class="swiper-slide">
-              <div class="slide-card">
-                <a href="#"></a>
-                <div class="text-top">카멕스 랜딩페이지</div>
-                <div class="thumbnail">
-                  <img src="images/3.png" alt="카멕스 랜딩페이지" />
-                </div>
-                <div class="info-row">
-                  <div class="text-below">
-                    개인 프로젝트 &nbsp;&nbsp; 기여도 100%
-                  </div>
-                  <div class="tags">
-                    <span class="tag figma">Figma</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+<div class="swiper-slide">
+  <div class="slide-card">
+    <div class="text-top">카멕스 랜딩페이지</div>
+    <div class="thumbnail">
+      <img src="images/3.png" 
+           alt="카멕스 랜딩페이지"
+           onclick="openImagePopup('images/carmex.jpg')" 
+           style="cursor:pointer;" />
+    </div>
+    <div class="info-row">
+      <div class="text-below">
+        개인 프로젝트 &nbsp;&nbsp; 기여도 100%
+      </div>
+      <div class="tags">
+        <span class="tag figma">Figma</span>
+      </div>
+    </div>
+  </div>
+</div>
 
             <!-- 🔹 동서티백 랜딩페이지 -->
             <div class="swiper-slide">
@@ -449,38 +404,41 @@
             </div>
 
             <!-- 🔹 휴애리 유채꽃밭 리디자인 -->
-            <div class="swiper-slide">
-              <div class="slide-card">
-                <a href="#"></a>
-                <div class="text-top">휴애리 유채꽃밭 리디자인</div>
-                <div class="thumbnail">
-                  <img src="images/8.png" alt="휴애리 유채꽃밭 리디자인" />
-                </div>
-                <div class="info-row">
-                  <div class="text-below">
-                    개인 프로젝트 &nbsp;&nbsp; 기여도 100%
-                  </div>
-                  <div class="tags">
-                    <span class="tag figma">Figma</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+<!-- 🔹 휴애리 유채꽃밭 리디자인 -->
+<div class="swiper-slide">
+  <div class="slide-card">
+    <div class="text-top">휴애리 유채꽃밭 리디자인</div>
+    <div class="thumbnail">
+      <a href="https://www.figma.com/proto/U0ceDSN70s1XiFWomTLrTE/6.12~6.18-%ED%98%91%EC%97%85-%EC%9B%B9-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?page-id=0%3A1&node-id=155-446&viewport=1501%2C-226%2C0.09&t=EEtMfCtL6MHBGFcl-1&scaling=scale-down-width&content-scaling=fixed" target="_blank">
+        <img src="images/8.png" alt="휴애리 유채꽃밭 리디자인" />
+      </a>
+    </div>
+    <div class="info-row">
+      <div class="text-below">
+        개인 프로젝트 &nbsp;&nbsp; 기여도 100%
+      </div>
+      <div class="tags">
+        <span class="tag figma">Figma</span>
+      </div>
+    </div>
+  </div>
+</div>
             <!-- 🔹 설악산 국립공원 리디자인 -->
             <div class="swiper-slide">
               <div class="slide-card">
                 <a href="#"></a>
                 <div class="text-top">설악산 국립공원 리디자인</div>
                 <div class="thumbnail">
-                  <img src="images/9.png" alt="설악산 국립공원 리디자인" />
+                  <img src="images/10.png" alt="설악산 국립공원 리디자인" />
                 </div>
                 <div class="info-row">
                   <div class="text-below">
                     개인 프로젝트 &nbsp;&nbsp; 기여도 100%
                   </div>
                   <div class="tags">
-                    <span class="tag figma">Figma</span>
+                    <span class="tag html">Html</span>
+                    <span class="tag css">Css</span>
+                    <span class="tag js">Js</span>
                   </div>
                 </div>
               </div>
@@ -489,31 +447,127 @@
           <div class="swiper-pagination"></div>
         </div>
       </section>
-      <section class="section7">
-        <h2>PROJECT</h2>
-        <div class="swiper mySwiper7">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="" alt="Slide 1" />
+ <div class="double-banner">
+  <div class="banner-row row1">
+    <div class="track">
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+    </div>
+  </div>
+
+  <div class="banner-row row2">
+    <div class="track">
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+      <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+      <img src="images/hello.png" alt="Smile" class="icon" />
+    </div>
+  </div>
+</div>
+      <!-- DETAIL PAGE && BANNER DESIGN / section7 시작 -->
+      <div class="card">
+        <section class="section7">
+<h2 class="typing-title first">DETAIL PAGE &&</h2>
+    <h2 class="typing-title second">BANNER DESIGN</h2>
+   <div class="swiper mySwiper4">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="hover-card" onclick="openImagePopup('images/prada.jpg')">
+        <img 
+          src="images/page1.png" 
+          alt="프라다 향수 상세페이지"
+          style="cursor:pointer;"
+        />
+        <div class="hover-text">PRADA PERFUME<br />
+          DETAIL PAGE<br />
+        ver.2025</div>
+      </div>
+    </div>
+           <div class="swiper-slide">
+      <div class="hover-card" ondblclick="openImagePopup('images/prada.jpg')">
+        <img 
+          src="images/page.jpg" 
+          alt="클라우드 모찌 아이스크림 상세페이지" 
+          style="cursor:pointer;"
+        />
+        <div class="hover-text">MOCHI ICECREAM<br />
+          DETAIL PAGE<br />
+        ver.2025</div>
+      </div>
+    </div>
+              <div class="swiper-slide">
+                <img src="images/page1.png" alt="상세페이지" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/page1.png" alt="상세페이지" />
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img4.png" alt="클러치데이" />
+                <div class="hover-text">CLUTCH DAY<br />
+          VERTICAL BANNER<br />
+         ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img6.jpeg" alt="대구 청년 소셜 크루 5회차" />
+                <div class="hover-text">SOCIAL CREW 5TH<br />
+          VERTICAL BANNER<br />
+         ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img5.jpeg" alt="대구 청년 소셜 크루 6회차" />
+                <div class="hover-text">SOCIAL CREW 6TH<br />
+          VERTICAL BANNER<br />
+        ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img3.png" alt="대구 청년 소셜 크루 3회차" />
+                <div class="hover-text">SOCIAL CREW 3TH<br />
+          VERTICAL BANNER<br />
+        ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img1.jpeg" alt="씨코리도 소비자 품평회" />
+                <div class="hover-text">C-CORRIDOR<br />
+          VERTICAL BANNER<br />
+        ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img2.jpeg" alt="이노베이션 프로젝트" />
+                <div class="hover-text">INNOVATION PROJECT<br />
+          VERTICAL BANNER<br />
+         ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img0.jpeg" alt="ICT 융복합 프로그램" />
+                <div class="hover-text">ICT INNOVATION<br />
+          VERTICAL BANNER<br />
+        ver.2020</div>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="images/cafe.jpg" alt="Slide 2" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/cafe.jpg" alt="Slide 3" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/cafe.jpg" alt="Slide 4" />
-            </div>
-            <div class="swiper-slide">
-              <img src="images/cafe.jpg" alt="Slide 5" />
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
-      <!-- 6번째 페이지 -->
-      <section class="section6">
+        </section>
+      </div>
+      <!-- DETAIL PAGE && BANNER DESIGN / section7 끝 -->
+      <!-- 섹션 아이콘 -->
+      <section class="section-icon">
         <div class="animated-text-block">
           <p class="right">
             <span class="roll icon">🎶</span>
@@ -539,9 +593,7 @@
           </p>
         </div>
       </section>
-      <!--7번째 페이지-->
-      <!-- Section 7 -->
-
+      <!-- 푸터 영역 시작 -->
       <footer class="footer">
         <div class="footer-content">
           <h2 class="thank-you">
@@ -559,11 +611,38 @@
           <p class="credit">WOO EUNJU PORTFOLIO.</p>
 
           <div class="smile">
-            <img src="images/section3/smile.png" alt="스마일" /
+            <img src="images/section3/smile.png" alt="스마일" />
           </div>
           <!-- 오른쪽 하단 스마일 모양 -->
         </div>
       </footer>
     </div>
+    <!-- 푸터 영역 끝 -->
+<!-- 모달 창 -->
+ <!-- 마켓컬리 전용 모달 -->
+<div id="imgPopup" class="img-popup">
+  <div class="img-popup-content">
+    <span class="img-popup-close" onclick="closeImagePopup()">&times;</span>
+    <img id="popupImage" src="" alt="큰 이미지" />
+  </div>
+</div>
+<!-- ✅ 카멕스 전용 모달 -->
+
+<div id="imgPopup" class="img-popup">
+  <!-- ✅ 화면 고정 닫기 버튼 -->
+  <span class="img-popup-close" onclick="closeImagePopup()">CLOSE</span>
+  <div class="img-popup-content">
+    <img id="popupImage" src="" alt="큰 이미지" />
+
+    <!-- 프르다 향수 상세페이지 모달 -->
+     <div id="imgPopup" class="img-popup">
+  <div class="img-popup-content">
+    <span class="img-popup-close" onclick="closeImagePopup()">&times;</span>
+    <img id="popupImage" src="" alt="큰 이미지" />
+  </div>
+</div>
+</div>
+  </div>
+</div>
   </body>
 </html>
