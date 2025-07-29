@@ -1,4 +1,4 @@
-/* @import url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css"); */
+@import url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css");
 @import url("https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
 
 /* 기본 스타일 초기화 */
@@ -368,7 +368,7 @@ body {
 .slide-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  /* gap: 10px; */
   width: 280px; /* 필요에 따라 조절 */
 }
 
@@ -445,6 +445,8 @@ body {
   cursor: pointer;
 }
 
+/* 비포 */
+
 /* 이미지 영역 */
 
 .thumbnail {
@@ -492,11 +494,12 @@ body {
 .tag {
   padding: 4px 10px;
   border-radius: 20px;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  color: white;
-  background-color: #555;
+  color: rgb(0, 0, 0);
+  background-color: #00ff90;
   white-space: nowrap;
+  font-family: "Pretendard Variable";
 }
 
 .tag.html {
@@ -516,6 +519,12 @@ body {
   font-family: "Pretendard Variable";
 }
 .tag.figma {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+
+.tag .before {
   background-color: #fff;
   color: #000;
   font-family: "Pretendard Variable";
@@ -757,4 +766,16 @@ body {
 /* 네온 뉴스카드 제어 장치 */
 .section4 .swiper {
   overflow: visible !important;
+}
+
+a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  outline: none; /* 포커스 시 선 제거 */
+}
+
+/* 링크에 hover 또는 focus 상태에서도 선이 생기지 않도록 설정 */
+a:focus,
+a:hover {
+  border: none;
+  outline: none;
 }
