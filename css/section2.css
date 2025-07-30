@@ -135,3 +135,16 @@
     width: 100%;
   }
 }
+
+/* 노션페이지 */
+.notion-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+  transition: 0.3s;
+}
+.notion-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
