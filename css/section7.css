@@ -56,7 +56,7 @@
 /* 스와이퍼 */
 .mySwiper4 {
   width: 100%;
-  max-width: 1200px; /* ✅ 슬라이더 폭 제한 */
+  max-width: 1200px; ✅ 슬라이더 폭 제한
   height: 100%;
   margin: 0 auto; /* ✅ 중앙 정렬 */
 }

@@ -1,7 +1,7 @@
 .section-icon {
   background: #fff;
   width: 100vw;
-  /* height: 100vh; */
+  height: 85vh;
   padding-top: 100px; /* ✅ 위쪽 여백 추가 */
   box-sizing: border-box;
 }
@@ -61,8 +61,6 @@
   }
 }
 
-
-
 /* 키워드 텍스트 */
 .bold {
   font-weight: 900;
@@ -104,7 +102,7 @@
   vertical-align: middle;
   margin: 0 10px;
   font-family: "Gmarket Sans", sans-serif;
-  line-height: 0.2; /* 높이에 맞춰 수직 위치 조정 */
+  /* line-height: 0.2; 높이에 맞춰 수직 위치 조정 */
 }
 .pill.pink {
   background-color: #ff1fb2;
