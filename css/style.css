@@ -1,0 +1,783 @@
+@import url("https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css");
+@import url("https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css");
+
+/* 기본 스타일 초기화 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "GmarketSans", "Pretendard Variable", system-ui, -apple-system,
+    Segoe UI, Roboto, "Noto Sans KR", Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  font-family: "Gmarket Sans", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+/* ✅ 상단 Ver 라인 - 테크 감성 */
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: "Pretendard", sans-serif;
+}
+
+.logo-bar {
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 255, 102, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 40px;
+}
+
+.logo-bar .ver {
+  color: #00ff66;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.logo-bar .owner {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* ✅ 기본 상태: 투명 글라스 느낌 */
+.fixed-nav {
+  background: rgba(0, 0, 0, 0.1); /* 거의 투명 */
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: none;
+  transition: all 0.3s ease; /* 스크롤 시 부드럽게 전환 */
+}
+.fixed-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.fixed-nav li a {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ 호버 시 네온 Glow 효과 + 라인 애니메이션 */
+.fixed-nav li a:hover {
+  color: #000;
+  background: #00ff66;
+  border-color: #00ff66;
+  box-shadow: 0 0 12px #00ff66, 0 0 24px rgba(0, 255, 102, 0.5);
+}
+
+.fixed-nav li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.fixed-nav li a:hover::before {
+  left: 100%;
+}
+/* ✅ 스크롤 후 활성화 상태 */
+.fixed-nav.scrolled {
+  background: rgba(0, 0, 0, 0.8); /* 불투명에 가까워짐 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 255, 102, 0.2);
+}
+
+/* ✅ 본문이 가려지지 않게 */
+body {
+  padding-top: 90px;
+}
+
+/* 움직이는 스마일 배너 */
+/* Moving banner container */
+.moving-banner {
+  width: 100%;
+  background-color: #00ff90;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+/* Track that scrolls horizontally */
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: scrollBanner 20s linear infinite;
+}
+
+/* Single banner item */
+.banner-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* 이미지+텍스트 좌측 정렬 */
+  font-weight: bold;
+  font-size: 35px;
+  padding: 0 40px;
+  gap: 40px;
+  white-space: nowrap;
+  color: black;
+}
+
+.banner-track img {
+  width: 50px;
+  height: 50px;
+  padding: 10px 10px;
+  margin-right: 40px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.banner-track span {
+  margin-top: 15px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Animation keyframes */
+@keyframes scrollBanner {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 메인 배너 이미지 애니메이션 */
+.spinning-icon-wrapper {
+  position: absolute;
+  top: 35%;
+  right: 30%;
+  z-index: 10;
+}
+
+.spin-icon {
+  width: 40px;
+  height: 40px;
+  animation: spin 4s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* ✅ section4 전체 영역 */
+/* ✅ 카드뉴스 영역 */
+.section4 {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #000;
+  text-align: center;
+  padding-top: 100px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ 타이틀 */
+.section4 h2 {
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 100px;
+  z-index: 10;
+  font-family: "Gmarket Sans", sans-serif;
+}
+
+/* ✅ Swiper 전체 컨테이너 */
+.mySwiper {
+  width: 100%;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+/* ✅ Swiper wrapper */
+.mySwiper .swiper-wrapper {
+  align-items: center;
+}
+
+/* ✅ 공통 슬라이드 스타일 */
+.mySwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* ✅ 이미지 기본 상태 */
+.mySwiper .swiper-slide img {
+  width: auto;
+  height: 400px;
+  object-fit: contain;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 0 15px rgba(245, 255, 249, 0.2);
+  border-radius: 0; /* ✅ 보더라디우스 제거 */
+}
+
+/* ✅ 중앙 슬라이드만 진한 네온 + 확대 */
+.mySwiper .swiper-slide-active img {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.8), 0 0 60px rgba(0, 255, 102, 0.6),
+    0 0 100px rgba(0, 255, 102, 0.5);
+}
+
+/* ✅ 네비게이션 버튼 */
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  width: 35px !important;
+  height: 35px !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  color: transparent !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  animation: spin 3s linear infinite;
+}
+
+.mySwiper .swiper-button-prev::after,
+.mySwiper .swiper-button-next::after {
+  display: none;
+}
+
+.mySwiper .swiper-button-prev {
+  background-image: url("../images/btn-prev.png") !important;
+  left: 20px;
+}
+
+.mySwiper .swiper-button-next {
+  background-image: url("../images/btn-next.png") !important;
+  right: 20px;
+}
+
+/* ✅ 회전 애니메이션 */
+@keyframes spin {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+/* ✅ 페이지네이션 */
+.mySwiper .swiper-pagination {
+  display: none;
+}
+
+.mySwiper .swiper-pagination-bullet {
+  background: #33ff85;
+  opacity: 0.2;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* 5번째 섹션 */
+
+.section5 {
+  width: 100%;
+  /* height: 1300px; */
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+.section5 h2 {
+  font-size: 80px;
+  color: #fff;
+  margin-top: 120px; /* 위 여백 */
+  margin-bottom: 100px; /* 아래 여백 */
+  text-align: right; /* 오른쪽 정렬 */
+  padding-right: 120px; /* ✅ 오른쪽에 여백 추가 */
+  position: relative;
+  z-index: 10;
+}
+.section5 h2.active {
+  opacity: 1;
+  transform: translateX(0) rotateZ(0deg);
+}
+
+.slide-card {
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+  width: 280px; /* 필요에 따라 조절 */
+}
+
+.mySwiper5 {
+  width: 90%;
+  height: 800px;
+  margin: 0 auto;
+}
+.mySwiper5 .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.mySwiper5 .swiper-slide {
+  /* background: #333; */
+  color: white;
+  font-size: 20px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  width: 450px !important;
+  /* height: 235px !important; */
+  height: 50%;
+  margin: 0 !important;
+  /* padding: 10px 0px; */
+  box-sizing: border-box;
+  border-radius: 10px;
+  position: relative;
+}
+.mySwiper5 .swiper-slide .slide-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* 마켓컬리 모달창 */
+.img-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+.img-popup-content {
+  position: relative;
+  max-width: 60%; /* ✅ 가로폭 줄임 (기존 90% → 80%) */
+  max-height: 90%; /* ✅ 높이 줄임 (기존 90% → 70%) */
+  margin: auto;
+  overflow-y: auto; /* 긴 이미지 스크롤 가능 */
+  background: #fff;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.img-popup-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-popup-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 비포 */
+
+/* 이미지 영역 */
+
+.thumbnail {
+  height: auto;
+  overflow: visible;
+}
+.thumbnail img {
+  /* margin-bottom: 150px; */
+  width: 450px;
+  height: auto;
+  display: block; /* 이미지 아래에 여백 제거 */
+  border-radius: 8px; /* 원하면 둥글게 */
+}
+
+.text-top {
+  text-align: left;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #00ff90;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.text-below {
+  color: 14px;
+  font-size: 0.9rem;
+  color: #aaa;
+  white-space: nowrap;
+  font-family: "Pretendard Variable";
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgb(0, 0, 0);
+  background-color: #00ff90;
+  white-space: nowrap;
+  font-family: "Pretendard Variable";
+}
+
+.tag.html {
+  background-color: #fff;
+  font-size: 12px;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+.tag.css {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+.tag.js {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+.tag.figma {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+
+.tag .before {
+  background-color: #fff;
+  color: #000;
+  font-family: "Pretendard Variable";
+}
+
+/* 홀수 슬라이드 아래 마진 */
+.mySwiper5 .swiper-slide:nth-child(odd) {
+  /* margin-bottom: 30px !important; */
+}
+
+/* 푸터 영역 */
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 120px;
+  position: relative;
+  overflow: hidden;
+  font-family: "Pretendard", sans-serif;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* THANK YOU 텍스트 */
+.thank-you {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 괄호 애니메이션 */
+.brace {
+  font-weight: 700;
+  font-size: 48px;
+  display: inline-block;
+  animation: glowColor 2.5s ease-in-out infinite;
+}
+
+.brace-left {
+  color: #ff38cf;
+  animation-delay: 0s;
+}
+
+.brace-right {
+  color: #00ff95;
+  animation-delay: 1.25s;
+}
+
+@keyframes glowColor {
+  0% {
+    color: #ff38cf;
+    transform: scale(1);
+  }
+  50% {
+    color: #00ff95;
+    transform: scale(1.15);
+  }
+  100% {
+    color: #ff38cf;
+    transform: scale(1);
+  }
+}
+
+/* 👋 웨이브 이모지 애니메이션 */
+.wave {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* 연락처 정보 */
+.contact-info {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.contact-info strong {
+  font-weight: 600;
+}
+
+.credit {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #888;
+}
+
+/* 핑크 스마일 (임시 원형) */
+.smile img {
+  position: absolute;
+  right: 110px;
+  bottom: 0;
+  width: 360px;
+  height: 360px;
+  /* background-color: #ff59c4; */
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(50%, 30%);
+}
+/* ============================
+   ✅ 반응형 전용 (통합본)
+   - PC 디자인 그대로 유지
+   - 노트북 / 태블릿 / 모바일 전용
+============================ */
+
+/* === 노트북 (1199px 이하) === */
+@media (max-width: 1199px) {
+  /* 섹션2 (Profile) */
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .profile-title,
+  .skills-title {
+    font-size: 60px;
+  }
+
+  /* 섹션3 (전체 축소) */
+  .skill-images {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+}
+
+/* === 태블릿 (768px 이하) === */
+@media (max-width: 768px) {
+  /* 섹션2 (Profile) */
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .section2 {
+    padding: 100px 40px;
+  }
+  .profile-title,
+  .skills-title {
+    font-size: 48px;
+    text-align: center;
+  }
+  .profile-box li {
+    font-size: 16px;
+  }
+
+  /* 섹션3 (전체 축소) */
+  .skill-images {
+    transform: scale(0.6);
+    transform-origin: top center;
+  }
+}
+
+/* === 모바일 (480px 이하) === */
+@media (max-width: 480px) {
+  /* 섹션2 (Profile) */
+  .section2 {
+    padding: 60px 20px;
+  }
+  .profile-title,
+  .skills-title {
+    font-size: 36px;
+  }
+  .profile-box li {
+    font-size: 14px;
+  }
+  .profile-box li span {
+    font-size: 12px;
+  }
+
+  /* 섹션3 (전체 축소) */
+  .skill-images {
+    transform: scale(0.45);
+    transform-origin: top center;
+  }
+}
+
+/* ✅ 고정 네비게이션 바 */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  padding: 10px 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #333;
+}
+
+.fixed-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.fixed-nav li a {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.fixed-nav li a:hover {
+  background: #00ff66;
+  color: #000;
+  border-color: #00ff66;
+}
+
+/* 네온 뉴스카드 제어 장치 */
+.section4 .swiper {
+  overflow: visible !important;
+}
+
+a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  outline: none; /* 포커스 시 선 제거 */
+}
+
+/* 링크에 hover 또는 focus 상태에서도 선이 생기지 않도록 설정 */
+a:focus,
+a:hover {
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,118 @@
+/* ✅ MY SKILLS TOOLS */
+.section3 {
+  position: relative;
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 20px;
+  text-align: left;
+  min-height: 900px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #ff52b1 0%, #ffffff 100%);
+}
+
+.section3 h2 {
+  font-size: 80px;
+  font-weight: 900;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.2;
+  white-space: pre-line;
+  width: 70%; /* ✅ 박스와 같은 폭 */
+  max-width: 1200px; /* ✅ 박스와 같은 최대 폭 */
+  margin: 0 auto 30px auto; /* ✅ 가운데 정렬 후 왼쪽은 박스와 딱 맞게 */
+  font-family: "Gmarket Sans", sans-serif;
+}
+
+/* ✅ 배경 박스 */
+/* ✅ 배경 박스 (배경과 라인 제거) */
+.skill-background-box {
+  position: relative;
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #fff4fa 0%, #ffcde7 100%);
+  border: none; /* ✅ 테두리 제거 */
+  border-radius: 40px; /* ✅ 둥근 모서리는 유지 */
+  padding: 40px 20px;
+  text-align: center;
+}
+/* ✅ 통 이미지 */
+.skills-full-img {
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 25px;
+  display: inline-block;
+  margin: 0 auto;
+  box-shadow: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.skills-full-img:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* ✅ 반응형 */
+@media (max-width: 1440px) {
+  .section3 h2 {
+    font-size: 60px;
+    width: 75%;
+    max-width: 1000px;
+  }
+  .skill-background-box {
+    width: 75%;
+    max-width: 1000px;
+  }
+  .skills-full-img {
+    width: 85%;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section3 h2 {
+    font-size: 50px;
+    width: 80%;
+    max-width: 900px;
+  }
+  .skill-background-box {
+    width: 80%;
+    max-width: 900px;
+    padding: 30px 15px;
+  }
+  .skills-full-img {
+    width: 80%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section3 h2 {
+    font-size: 42px;
+    width: 85%;
+    max-width: none;
+  }
+  .skill-background-box {
+    width: 85%;
+    padding: 25px 10px;
+  }
+  .skills-full-img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .section3 h2 {
+    font-size: 32px;
+    width: 90%;
+  }
+  .skill-background-box {
+    width: 90%;
+    padding: 20px 10px;
+  }
+  .skills-full-img {
+    width: 95%;
+  }
+}

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Woo Eunju Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSans.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- 프로젝트 CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carmex.css" />
+    <link rel="stylesheet" href="css/section1.css" />
+    <link rel="stylesheet" href="css/section2.css" />
+    <link rel="stylesheet" href="css/section3.css" />
+    <link rel="stylesheet" href="css/section6.css" />
+    <link rel="stylesheet" href="css/section7.css" />
+    <link rel="stylesheet" href="css/section-icon.css" />
+    <link rel="stylesheet" href="css/cursor.css" />
+
+    <!-- Swiper CSS/JS (v11로 통일) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- JS (모달 JS 필요 없음) -->
+    <script src="js/swiper-init.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/myswiper4.js" defer></script>
+    <script src="js/an.js" defer></script>
+    <!-- <script src="js/marketkurly.js" defer></script>
+    <script src="js/carmex.js" defer></script>
+    <script src="js/prada.js" defer></script> -->
+    <script src="js/section7title.js" defer></script>
+    <script src="js/nav.js" defer></script>
+
+    <!-- ✅ CSS-Only 모달 스타일 -->
+    <style>
+      .c-modal { position: fixed; inset: 0; display: none; z-index: 9999; }
+      .c-modal:target { display: block; }
+      .c-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.65); display: block; }
+      .c-modal__dialog {
+        position: relative; box-sizing: border-box;
+        max-width: min(1200px, 92vw); max-height: 90vh;
+        margin: 5vh auto; background: #000; overflow: auto; border-radius: 10px;
+      }
+      .c-modal__dialog img { display: block; width: 100%; height: auto; }
+      .c-modal__close {
+        position: sticky; top: 0; margin-left: auto; display: inline-block;
+        padding: 8px 12px; background: rgba(0,0,0,.4); color: #fff; text-decoration: none;
+        font-size: 28px; line-height: 1;
+      }
+      .c-modal, .c-modal__dialog { overscroll-behavior: contain; }
+    </style>
+  </head>
+  <body>
+    <div class="logo-bar">
+      <span class="ver">Ver.2025</span>
+      <span class="owner">WOO EUNJU PORTFOLIO</span>
+    </div>
+
+    <nav class="fixed-nav">
+      <ul>
+        <li><a href="#profile">PROFILE</a></li>
+        <li><a href="#skills">MY SKILL & TOOLS</a></li>
+        <li><a href="#cardnews">CARD NEWS</a></li>
+        <li><a href="#webdesign">WEB DESIGN</a></li>
+        <li><a href="#appdesign">APP DESIGN</a></li>
+        <li><a href="#detail">DETAIL & BANNER</a></li>
+      </ul>
+    </nav>
+
+    <!-- 1번째 페이지-->
+    <div class="container">
+      <section class="section1">
+        <div class="bracket-group">
+          <span class="bracket left">{</span>
+          <div class="text">
+            <div class="greeting">HELLO I'AM</div>
+            <div class="name">WOO EUNJU</div>
+          </div>
+          <span class="bracket right">}</span>
+        </div>
+        <div class="spinning-icon-wrapper">
+          <img src="images/mainicon.png" alt="Spinning Icon" class="spin-icon" />
+        </div>
+        <div class="moving-banner">
+          <div class="banner-track">
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+            <img src="images/hello.png" alt="Smile" class="banner-icon" /><span>HELLO</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section2 profile-section" id="profile">
+        <!-- ✅ 프로필 소개 -->
+        <div class="intro-top">
+          <div class="profile-intro">
+            <h1 class="profile-title">PROFILE</h1>
+            <p class="intro-text">
+              UI·UX와 그래픽 디자인을 넘나드는 멀티플레이어 디자이너
+              <strong>우은주</strong>입니다.
+            </p>
+            <div class="intro-tags">
+              <span>#UIUXDesigner</span>
+              <span>#GraphicDesigner</span>
+              <span>#CraftDesign</span>
+              <span>#Branding</span>
+              <a href="https://www.notion.so/22196d25565580108f50f8769b58920d?source=copy_link" target="_blank">
+                <img src="images/notion.png" alt="Notion Link" class="notion-icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ 3열 레이아웃 -->
+        <div class="profile-grid top-grid">
+          <!-- 1. Education + License -->
+          <div class="profile-column">
+            <div class="profile-heading">
+              <img src="images/ghost.png" class="profile-icon" alt="Education" />
+              <h2>EDUCATION</h2>
+            </div>
+            <ul>
+              <li>계명대학교 미술대학 공예디자인과 전공<br /><span>2020.03 | 금속공예</span></li>
+              <li>경명여자 고등학교<br /><span>2016.02</span></li>
+            </ul>
+
+            <div class="profile-heading" style="margin-top: 20px">
+              <img src="images/ghost.png" class="profile-icon" alt="License" />
+              <h2>LICENSE</h2>
+            </div>
+            <ul>
+              <li>웹디자인 개발기능사 필기<br /><span>2023.06 | 한국산업인력공단</span></li>
+              <li>OA 마스터<br /><span>2022.09 | 한국생산성본부(KPC)</span></li>
+              <li>GTQ 포토샵 1급<br /><span>2022.06 | 한국생산성본부(KPC)</span></li>
+            </ul>
+          </div>
+
+          <!-- 2. Experience + Exhibition -->
+          <div class="profile-column">
+            <div class="profile-heading">
+              <img src="images/ghost.png" class="profile-icon" alt="Experience" />
+              <h2>EXPERIENCE</h2>
+            </div>
+            <ul>
+              <li>(사)푸른차문화연구원<br /><span>2022.11~2024.12 | 홍보마케팅 & 차(茶) 연구원</span></li>
+              <li>대구공예<br /><span>2021.03~2022.03 | 홍보마케팅 & 패키지디자인</span></li>
+              <li>IT 스타트업<br /><span>2020.03~2021.01 | 그래픽디자인 & 창업교육팀</span></li>
+            </ul>
+
+            <div class="profile-heading" style="margin-top: 20px">
+              <img src="images/ghost.png" class="profile-icon" alt="Exhibition" />
+              <h2>EXHIBITION</h2>
+            </div>
+            <ul>
+              <li>계명대학교 공예디자인과 3PCS 전시회<br /><span>2019.11 | 극재미술관</span></li>
+              <li>계명대학교 공예디자인과 그룹전<br /><span>2018.09 | 극재미술관</span></li>
+            </ul>
+          </div>
+
+          <!-- 3. Awards -->
+          <div class="profile-column">
+            <div class="profile-heading">
+              <img src="images/ghost.png" class="profile-icon" alt="Awards" />
+              <h2>AWARDS</h2>
+            </div>
+            <ul>
+              <li>제 50회 경북 산업디자인 전람회 공모전 특선<br /><span>2019.03 | 대구경북공예협동조합</span></li>
+              <li>제 10회 현대 주얼리 디자인 공모전 입선<br /><span>2019.03 | (사)디자인정책연구원</span></li>
+              <li>제 6회 주얼리디자인어워드 입선<br /><span>2017.07 | (사)한국주얼리산학엽구협회</span></li>
+              <li>청년 창업가들의 창업캠프 '동고동락' 3위 수상<br /><span>2016.11 | 대구창조경제혁신센터</span></li>
+              <li>제 5회 주얼리디자인어워드 입선<br /><span>2016.07 | 대구창조경제혁신센터</span></li>
+              <li>창업 아이디어 경진대회 1위 수상<br /><span>2016.06 | 대구창조경제혁신센터</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY SKILLS TOOLS -->
+      <section class="section3" id="skills">
+        <h2>MY<br />SKILLS TOOLS</h2>
+        <div class="skill-background-box">
+          <img src="images/pink.png" alt="My Skills Tools" class="skills-full-img" />
+        </div>
+      </section>
+
+      <!-- 4번째 페이지-->
+      <section class="section4" id="cardnews">
+        <h2>CARD NEWS DESIGN</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews1.jpg" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews2.jpg" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews3.jpg" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews4.png" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews5.png" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews10.jpg" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews6.jpg" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews7.jpg" alt="#" /></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/cardnews8.jpg" alt="#" /></a></div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- 5번째 페이지 -->
+      <section class="section5" id="webdesign">
+        <h2>WEB DESIGN<br />DEVELOPMENT</h2>
+
+        <div class="swiper mySwiper5">
+          <div class="swiper-wrapper">
+            <!-- 🔹 삼성화재 클론코딩 -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <a href="https://wooeunju.github.io/samsungfire-clone/" target="_blank">
+                  <div class="text-top">삼성화재 클론코딩</div>
+                  <div class="thumbnail"><img src="images/1.png" alt="삼성화재 클론코딩" /></div>
+                  <div class="info-row">
+                    <div class="text-below">개인 프로젝트 &nbsp;&nbsp; 기여도 100%</div>
+                    <div class="tags"><span class="tag html">Html</span><span class="tag css">Css</span><span class="tag js">Js</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 🔹 도미노피자 클론코딩 -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <a href="https://dominosclonecoding.vercel.app/" target="_blank">
+                  <div class="text-top">도미노피자 클론코딩</div>
+                  <div class="thumbnail"><img src="images/2.png" alt="도미노피자 클론코딩" /></div>
+                  <div class="info-row">
+                    <div class="text-below">개인 프로젝트 &nbsp;&nbsp; 기여도 100%</div>
+                    <div class="tags"><span class="tag html">Html</span><span class="tag css">Css</span><span class="tag js">Js</span></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- 🔹 설악산 국립공원 홈페이지 -->
+            <div class="swiper-slide">
+              <div class="text-top">설악산 국립공원 리디자인</div>
+              <a href="https://seoraksanpark.vercel.app/" target="_blank">
+                <div class="thumbnail"><img src="images/10.png" alt="설악산 국립공원 리디자인" /></div>
+              </a>
+              <div class="info-row">
+                <div class="text-below">개인 프로젝트 &nbsp;&nbsp; 기여도 100%</div>
+                <div class="tags">
+                  <span class="tag html">Html</span><span class="tag css">Css</span><span class="tag js">Js</span>
+                  <a class="tag before" href="https://www.knps.or.kr/front/portal/visit/visitCourseMain.do?parkId=120400&menuNo=7020093" target="_blank">Before</a>
+                  <a class="tag process" href="https://www.figma.com/proto/RPdxGksKO0WJ3HTU7wEv0f/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=1846%3A2368&node-id=1846-2688&viewport=558%2C60%2C0.08&t=PGmRgMNWEiDfqNCe-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Process</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔹 카멕스 랜딩페이지 (썸네일 → 모달) -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <div class="text-top">카멕스 립밤 랜딩페이지</div>
+                <div class="thumbnail">
+                  <a href="#modal-carmex">
+                    <img src="images/3.png" alt="카멕스 랜딩페이지" style="cursor: pointer" />
+                  </a>
+                </div>
+                <div class="info-row">
+                  <div class="text-below">개인 프로젝트 &nbsp;&nbsp; 기여도 100%</div>
+                  <div class="tags"><span class="tag figma">Figma</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔹 마켓컬리 랜딩페이지 (썸네일 → 모달) -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <div class="text-top">마켓컬리 랜딩페이지</div>
+                <div class="thumbnail">
+                  <a href="#modal-kurly">
+                    <img src="images/5.png" alt="마켓컬리 랜딩페이지" style="cursor: pointer" />
+                  </a>
+                </div>
+                <div class="info-row">
+                  <div class="text-below">개인 프로젝트 &nbsp;&nbsp; 기여도 100%</div>
+                  <div class="tags"><span class="tag figma">Figma</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔹 휴애리 유채꽃밭 리디자인 -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <div class="text-top">휴애리 유채꽃밭 리디자인</div>
+                <div class="thumbnail">
+                  <a
+                    href="https://www.figma.com/proto/U0ceDSN70s1XiFWomTLrTE/6.12~6.18-%ED%98%91%EC%97%85-%EC%9B%B9-%EB%A6%AC%EB%94%94%EC%9E%90%EC%9D%B8?page-id=0%3A1&node-id=155-446&viewport=1501%2C-226%2C0.09&t=EEtMfCtL6MHBGFcl-1&scaling=scale-down-width&content-scaling=fixed"
+                    target="_blank"
+                  >
+                    <img src="images/8.png" alt="휴애리 유채꽃밭 리디자인" />
+                  </a>
+                </div>
+                <div class="info-row">
+                  <div class="text-below">팀 프로젝트 &nbsp;&nbsp; 기여도 25%</div>
+                  <div class="tags">
+                    <span class="tag figma">Figma</span>
+                    <a class="tag before" href="http://m.hueree.com/index.php" target="_blank">Before</a>
+                    <span class="tag creation">Process</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔹 RUNCANVAS 팀 앱디자인 -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <div class="text-top">RUNCANVAS 앱 디자인</div>
+                <div class="thumbnail">
+                  <a
+                    href="https://www.figma.com/proto/Xnh4XXKfBdoWs6wU4tnQ85/RunCanvas-%EC%95%B1%EB%94%94%EC%9E%90%EC%9D%B8-1%EC%A1%B0?page-id=0%3A1&node-id=28-650&viewport=-824%2C267%2C0.51&t=K3wNeSt4G52qzH1L-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=28%3A650"
+                    target="_blank"
+                  >
+                    <img src="images/64.png" alt="앱 디자인" />
+                  </a>
+                </div>
+                <div class="info-row">
+                  <div class="text-below">팀 프로젝트 &nbsp;&nbsp; 기여도 33.3%</div>
+                  <div class="tags">
+                    <span class="tag figma">Figma</span>
+                    <a
+                      class="tag process"
+                      href="https://www.figma.com/proto/Xnh4XXKfBdoWs6wU4tnQ85/RunCanvas-%EC%95%B1%EB%94%94%EC%9E%90%EC%9D%B8-1%EC%A1%B0?page-id=336%3A6423&node-id=336-8843&viewport=272%2C137%2C0.13&t=fUx0JW3wT8Of7I5c-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=190%3A3332"
+                      target="_blank"
+                      >Process</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔹 개인 앱 디자인 -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <a href="#"></a>
+                <div class="text-top">MORE 앱 디자인</div>
+                <div class="thumbnail">
+                  <a
+                    href="https://www.figma.com/proto/RPdxGksKO0WJ3HTU7wEv0f/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=1582%3A820&node-id=1719-353&viewport=1857%2C2078%2C0.19&t=2YgauOtn6grv0mUg-1&scaling=min-zoom&content-scaling=fixed"
+                    target="_blank"
+                  >
+                    <img src="images/14.png" alt="개인 앱 디자인 준비중" />
+                  </a>
+                </div>
+                <div class="info-row">
+                  <div class="text-below">개인 프로젝트 &nbsp;&nbsp; 기여도 100%</div>
+                  <div class="tags">
+                    <span class="tag figma">Figma</span>
+                    <a
+                      class="tag process"
+                      href="https://www.figma.com/proto/RPdxGksKO0WJ3HTU7wEv0f/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4-%EB%94%94%EC%9E%90%EC%9D%B8?page-id=1846%3A1596&node-id=1846-1597&viewport=608%2C138%2C0.06&t=i1cJwB5TVURaU84X-1&scaling=min-zoom&content-scaling=fixed"
+                      target="_blank"
+                      >Process</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 🔹 DETAIL(프라다/모찌)도 모달 연결 예시 카드 -->
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <div class="text-top">PRADA 상세페이지</div>
+                <a class="thumbnail" href="#modal-prada">
+                  <img src="images/page1.png" alt="프라다 향수 상세페이지" style="cursor:pointer" />
+                </a>
+                <div class="info-row">
+                  <div class="text-below">개인 프로젝트 &nbsp;&nbsp; ver.2025</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="slide-card">
+                <div class="text-top">MOCHI 상세페이지</div>
+                <a class="thumbnail" href="#modal-mochi">
+                  <img src="images/page.jpg" alt="모찌 아이스크림 상세페이지" style="cursor:pointer" />
+                </a>
+                <div class="info-row">
+                  <div class="text-below">개인 프로젝트 &nbsp;&nbsp; ver.2025</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </section>
+
+      <div class="double-banner">
+        <div class="banner-row row1">
+          <div class="track">
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+          </div>
+        </div>
+
+        <div class="banner-row row2">
+          <div class="track">
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+            <span>SIMPLE THINKING ✦ MODERN DESIGN ✦ DETAIL DRIVEN ✦</span>
+            <img src="images/hello.png" alt="Smile" class="icon" />
+          </div>
+        </div>
+      </div>
+
+      <!-- DETAIL PAGE && BANNER DESIGN / section7 -->
+      <div class="card" id="detail">
+        <section class="section7">
+          <h2 class="typing-title first">DETAIL PAGE &&</h2>
+          <h2 class="typing-title second">BANNER DESIGN</h2>
+          <div class="swiper mySwiper4">
+            <div class="swiper-wrapper">
+              <!-- ✅ 프라다: a[href="#modal-prada"]로 변경 -->
+              <div class="swiper-slide">
+                <a class="hover-card" href="#modal-prada" style="display:block">
+                  <img src="images/page1.png" alt="프라다 향수 상세페이지" style="cursor: pointer" />
+                  <div class="hover-text">PRADA PERFUME<br />DETAIL PAGE<br />ver.2025</div>
+                </a>
+              </div>
+              <!-- ✅ 모찌: a[href="#modal-mochi"]로 변경 -->
+              <div class="swiper-slide">
+                <a class="hover-card" href="#modal-mochi" style="display:block">
+                  <img src="images/page.jpg" alt="클라우드 모찌 아이스크림 상세페이지" style="cursor: pointer" />
+                  <div class="hover-text">MOCHI ICECREAM<br />DETAIL PAGE<br />ver.2025</div>
+                </a>
+              </div>
+
+              <div class="swiper-slide"><img src="images/page1.png" alt="상세페이지" /></div>
+              <div class="swiper-slide"><img src="images/page1.png" alt="상세페이지" /></div>
+              <div class="swiper-slide">
+                <img src="images/img4.png" alt="클러치데이" />
+                <div class="hover-text">CLUTCH DAY<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img6.jpeg" alt="대구 청년 소셜 크루 5회차" />
+                <div class="hover-text">SOCIAL CREW 5TH<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img5.jpeg" alt="대구 청년 소셜 크루 6회차" />
+                <div class="hover-text">SOCIAL CREW 6TH<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img3.png" alt="대구 청년 소셜 크루 3회차" />
+                <div class="hover-text">SOCIAL CREW 3TH<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img1.jpeg" alt="씨코리도 소비자 품평회" />
+                <div class="hover-text">C-CORRIDOR<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img2.jpeg" alt="이노베이션 프로젝트" />
+                <div class="hover-text">INNOVATION PROJECT<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+              <div class="swiper-slide">
+                <img src="images/img0.jpeg" alt="ICT 융복합 프로그램" />
+                <div class="hover-text">ICT INNOVATION<br />VERTICAL BANNER<br />ver.2020</div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 섹션 아이콘 -->
+      <section class="section-icon">
+        <div class="animated-text-block">
+          <p class="right">
+            <span class="roll icon"></span>
+            <span class="roll pink-dot"></span>
+            <span class="roll bold">DESIGNED</span>
+            <span class="roll bold">WITH</span>
+          </p>
+          <p class="left">
+            <span class="roll bold">HEART</span>
+            <span class="roll pill pink">COLORED</span>
+          </p>
+          <p class="right">
+            <span class="roll pill green"></span>
+            <span class="roll ghost"><img src="images/black.png" alt="하단 유령 이미지" /></span>
+            <span class="roll bold">WITH</span>
+            <span class="roll bold">JOY</span>
+          </p>
+          <p class="left">
+            <span class="roll bold">BRIDGING</span>
+            <span class="roll bold">MINDS</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- 푸터 영역 시작 -->
+      <footer class="footer">
+        <div class="footer-content">
+          <h2 class="thank-you">
+            <span class="brace brace-left">{</span>
+            THANK YOU
+            <span class="wave">👋</span>
+            <span class="brace brace-right">}</span>
+          </h2>
+
+          <div class="contact-info">
+            <p><strong>Contact</strong> | wooeunju7496@gmail.com</p>
+            <p><strong>Phone Number</strong> | +82. 10. 9725. 7496</p>
+          </div>
+
+          <p class="credit">WOO EUNJU PORTFOLIO.</p>
+
+          <div class="smile">
+            <img src="images/section3/smile.png" alt="스마일" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- 푸터 영역 끝 -->
+
+    <!-- ✅ JS 없이 동작하는 :target 모달들 (4개) -->
+    <!-- 카멕스 -->
+    <div id="modal-carmex" class="c-modal" aria-hidden="true">
+      <a href="#" class="c-modal__backdrop" aria-label="닫기"></a>
+      <div class="c-modal__dialog" role="dialog" aria-modal="true">
+        <a href="#" class="c-modal__close" aria-label="닫기">×</a>
+        <img src="images/carmex.jpg" alt="카멕스 상세페이지 큰 이미지" />
+      </div>
+    </div>
+
+    <!-- 마켓컬리 -->
+    <div id="modal-kurly" class="c-modal" aria-hidden="true">
+      <a href="#" class="c-modal__backdrop" aria-label="닫기"></a>
+      <div class="c-modal__dialog" role="dialog" aria-modal="true">
+        <a href="#" class="c-modal__close" aria-label="닫기">×</a>
+        <img src="images/marketkurly.jpg" alt="마켓컬리 상세페이지 큰 이미지" />
+      </div>
+    </div>
+
+    <!-- PRADA 상세 -->
+    <div id="modal-prada" class="c-modal" aria-hidden="true">
+      <a href="#" class="c-modal__backdrop" aria-label="닫기"></a>
+      <div class="c-modal__dialog" role="dialog" aria-modal="true">
+        <a href="#" class="c-modal__close" aria-label="닫기">×</a>
+        <img src="images/prada.jpg" alt="프라다 향수 상세페이지 큰 이미지" />
+      </div>
+    </div>
+
+    <!-- MOCHI 상세 -->
+    <div id="modal-mochi" class="c-modal" aria-hidden="true">
+      <a href="#" class="c-modal__backdrop" aria-label="닫기"></a>
+      <div class="c-modal__dialog" role="dialog" aria-modal="true">
+        <a href="#" class="c-modal__close" aria-label="닫기">×</a>
+        <img src="images/mochi.jpg" alt="모찌 아이스크림 상세페이지 큰 이미지" />
+      </div>
+    </div>
+  </body>
+</html>

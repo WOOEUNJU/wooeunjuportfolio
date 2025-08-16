@@ -1,0 +1,77 @@
+/* ✅ 섹션 전체 */
+.section6 {
+  background-color: #000;
+  padding: 0;
+  margin: 0;
+}
+
+/* ✅ 배너 공통 */
+.double-banner {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ✅ 배너 행 (줄) */
+.banner-row {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/* ✅ 첫 번째 배너 (민트) */
+.row1 {
+  background-color: #00ff99;
+  height: 60px;
+}
+
+/* ✅ 두 번째 배너 (핑크) */
+.row2 {
+  background-color: #ff52b1;
+  height: 60px;
+}
+
+/* ✅ 스크롤 트랙 */
+.track {
+  display: inline-flex;
+  align-items: center;
+  gap: 24px;
+  animation: marquee 30s linear infinite;
+  padding: 0 20px;
+  white-space: nowrap;
+}
+
+/* ✅ 텍스트 스타일 */
+.track span {
+  font-weight: 800;
+  font-size: 20px;
+  color: #000;
+  font-family: "Gmarket Sans", sans-serif;
+}
+
+/* ✅ 아이콘 이미지 */
+.track img.icon {
+  height: 24px;
+  width: auto;
+  vertical-align: middle;
+}
+
+/* ✅ 마키 애니메이션 */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ✅ 배너들 사이 간격 제거 */
+.double-banner .row1,
+.double-banner .row2 {
+  margin: 0;
+  padding: 0;
+  line-height: 60px;
+}

@@ -1,0 +1,148 @@
+/* DETAIL PAGE && BANNER DESIGN */
+.card {
+  width: 100%;
+  background-color: #000;
+  padding: 100px 100px; /* ✅ 위아래 여백 추가 */
+  box-sizing: border-box;
+}
+
+/* DETAIL PAGE && BANNER DESIGN 전체 레이아웃 */
+.section7 {
+  width: 100%;
+  max-width: 1200px; /* ✅ 내용 폭 제한 */
+  margin: 0 auto;
+  background: #000;
+  text-align: center; /* ✅ 제목 중앙 정렬 */
+}
+
+/* 제목 스타일 */
+.typing-title {
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  border-right: 4px solid #fff; /* 타이핑 중 커서 */
+  width: 0;
+}
+
+/* ✅ 한 번만 타이핑 후 고정 + 커서 사라짐 */
+.typing-active {
+  animation: typing 2.5s steps(30, end) forwards,
+    remove-cursor 0.1s ease forwards 2.6s;
+}
+
+.second.typing-active {
+  animation-delay: 0.3s; /* ✅ 첫 줄과 거의 동시에 시작 (살짝 딜레이) */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes remove-cursor {
+  to {
+    border-right: none;
+  }
+}
+/* 스와이퍼 */
+.mySwiper4 {
+  width: 100%;
+  max-width: 1200px; ✅ 슬라이더 폭 제한
+  height: 100%;
+  margin: 0 auto; /* ✅ 중앙 정렬 */
+}
+
+.mySwiper4 .swiper-slide {
+  position: relative; /* ✅ hover 텍스트 위치 잡기 */
+  overflow: hidden;
+  /* width: 100% !important; */
+  height: 100% !important;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mySwiper4 .swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease; /* ✅ 확대 효과 제거 */
+}
+
+/* ✅ 중앙 배치된 hover 텍스트 */
+.mySwiper4 .hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00ff90;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+
+  text-align: center;
+  line-height: 1.4;
+
+  white-space: pre-line; /* ✅ <br> 줄바꿈 허용 */
+  word-break: keep-all; /* ✅ 단어 쪼개지지 않음 */
+}
+/* ✅ Hover 시 효과 */
+.mySwiper4 .swiper-slide:hover img {
+  filter: brightness(20%); /* ✅ 어두워짐만 유지 */
+}
+
+.mySwiper4 .swiper-slide:hover .hover-text {
+  opacity: 1;
+}
+
+/* 프라다 모달창 */
+.img-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  position: relative;
+  max-width: 20%;
+  max-height: 30%;
+}
+
+.popup-content img {
+  max-width: 100%;
+  max-height: 60vh;
+  border-radius: 10px;
+}
+
+.img-popup .close {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.img-popup .close:hover {
+  color: red;
+}
